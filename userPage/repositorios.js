@@ -3,7 +3,7 @@ let user = document.location.search;
 user = user.substring(1);
 
 
-fetch(`https://fake-github2.herokuapp.com/api/search/${user}`)
+fetch(`https://fake-github.herokuapp.com/api/search/${user}`)
     .then(function(resultado) {
         resultado.json().then(function(data) {
             mostrarInfo(data.avatar_url, data.name, data.login);;
@@ -14,7 +14,7 @@ fetch(`https://fake-github2.herokuapp.com/api/search/${user}`)
     });
 
 
-fetch(`https://fake-github2.herokuapp.com/api/search/${user}/repos`)
+fetch(`https://fake-github.herokuapp.com/api/search/${user}/repos`)
     .then(function(resultado) {
         resultado.json().then(function(repos) {
             repos.forEach(function(e) {
